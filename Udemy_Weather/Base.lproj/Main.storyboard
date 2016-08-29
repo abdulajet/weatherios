@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Udemy_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7FM-sQ-5Ia">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="2Rc-IK-0w9"/>
+                                    <constraint firstAttribute="height" constant="30" id="p6G-vv-YvE"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a city to get the weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myd-OP-Wix">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NIo-xZ-KzM"/>
+                                    <constraint firstAttribute="width" constant="248" id="oID-Lh-E2A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki3-Vi-pUR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BRf-Bu-UH3"/>
+                                    <constraint firstAttribute="width" constant="85" id="VZM-2C-De7"/>
+                                </constraints>
+                                <state key="normal" title="Get forecast"/>
+                                <connections>
+                                    <action selector="getForecast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gaI-hU-FhN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usM-Hw-U3Q">
+                                <frame key="frameInset" minX="49" minY="259" width="301" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="301" id="2E5-PX-nl7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="224" id="NhB-Gl-5JT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="usM-Hw-U3Q" firstAttribute="top" secondItem="Ki3-Vi-pUR" secondAttribute="bottom" constant="46" id="6df-of-EYU"/>
+                            <constraint firstItem="myd-OP-Wix" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="943-pN-BJO"/>
+                            <constraint firstItem="7FM-sQ-5Ia" firstAttribute="top" secondItem="myd-OP-Wix" secondAttribute="bottom" constant="39" id="Dmk-lS-zuA"/>
+                            <constraint firstItem="usM-Hw-U3Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LPa-Xa-oYV"/>
+                            <constraint firstItem="myd-OP-Wix" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UBW-QL-p12"/>
+                            <constraint firstItem="7FM-sQ-5Ia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iLG-L4-FdH"/>
+                            <constraint firstItem="Ki3-Vi-pUR" firstAttribute="top" secondItem="7FM-sQ-5Ia" secondAttribute="bottom" constant="34" id="vps-Fx-NYx"/>
+                            <constraint firstItem="Ki3-Vi-pUR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xGq-Gb-zGO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityText" destination="7FM-sQ-5Ia" id="U7q-xH-j8M"/>
+                        <outlet property="forecastLabel" destination="usM-Hw-U3Q" id="s0g-cf-8YH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
